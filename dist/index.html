@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gulp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/icon.svg">
+  <link rel="stylesheet" href="css/style.min.css">
+ </head>
+ 
+ <body>
+  <div class="wrapper">
+ <header class="header">
+				<div class="container-fluid">
+					<div class="header__item">
+						<button id="burger-button" class="header__burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<div class="header__logo">
+							<img src="images/logo.svg" alt="LOGO">
+						</div>
+						<div class="header__help">
+							<img src="images/help.svg" alt="Помощь">
+							<div class="header__help-info">
+								<div class="header__help-info-container">
+									<p class="header__help-info-text">
+										Тел. поддержки
+									</p>
+									<a href="tel:" class="header__help-info-tel">
+										8 800 123-45-67
+									</a>
+									<div class="header__help-info-button">
+										<a href="#">Написать письмо</a>
+										</div>
+								</div>
+										<svg class="header__help-info-svg" width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g filter="url(#filter0_d_2_2)">
+											<path d="M16 5L28.9904 18.5H3.00962L16 5Z" fill="white"/>
+											</g>
+											<defs>
+											<filter id="filter0_d_2_2" x="0.00961304" y="0" width="31.9808" height="19.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+											<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+											<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+											<feOffset dy="-2"/>
+											<feGaussianBlur stdDeviation="1.5"/>
+											<feComposite in2="hardAlpha" operator="out"/>
+											<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+											<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_2"/>
+											<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_2" result="shape"/>
+											</filter>
+											</defs>
+										</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</header>
+
+ <main class="main">
+				<section id="popup" class="popup">
+					<div class="popup__container">
+						<div class="popup__item">
+							<div class="popup__title">
+								<h3>Введите логин и пароль<br>для входа в Личный кабинет</h3>
+							</div>
+							<form class="popup__form">
+								<input type="text" placeholder="Логин">
+								<input type="password" placeholder="Пароль">
+								<input type="submit" value="Войти">
+							</form>
+							<div class="popup__remind">
+								<a href="#">Напомнить пароль</a>
+							</div>
+							<div class="popup__registr">
+								<a href="#">Регистрация</a>
+							</div>
+							<div class="popup__close">
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="burger-menu">
+					<div class="container-fluid burger-menu__popup ">
+						<div id="burger" class="burger-menu__container">
+							<div class="burger-menu__inner">
+								<div class="burger-menu__cabinet">
+									<h5>ЛИЧНЫЙ КАБИНЕТ</h5>
+									<button class="burger-menu__button">Вход в Личный кабинет</button>
+								</div>
+								<div class="burger-menu__info">
+									<h5>ЛИЧНЫЙ КАБИНЕТ</h5>
+									<a href="#">Условия использования сервиса</a>
+									<a href="#">Способы оплаты</a>
+									<a href="#">Часто задаваемые вопросы</a>
+									<a href="#">Служба поддержки</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+
+				<section class="top" style="background-image: url(images/pic.png);">	
+					<div class="container">
+						<div class="top__inner">
+							<div class="top__title">
+								<h2>Поиск начислений</h2>
+							</div>
+							<form class="top__search">
+								<input class="top__search-form" type="text" placeholder="Введите данные для поиска">
+								<button class="top__search-btn"><img class="top__search-img" src="images/search.svg" alt="search"></button>
+								<input class="top__search-button" type="submit" value="Найти">
+							</form>
+							<div class="top__text">
+								<p>Чем больше параметров введено, тем полнее результаты поиска</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="services">
+					<div class="container">
+						<div class="services__title">
+							<h3>Здесь можно оплатить</h3>
+							<h4>Узнайте, как оплатить</h4>
+						</div>
+						<ul class="services__catalog">
+							<li><a class="services__catalog-link" href="#">Штрафы ГИБДД</a></li>
+							<li><a class="services__catalog-link" href="#">Судебные задолженности</a></li>
+							<li><a class="services__catalog-link" href="#">Налоги</a></li>
+							<li><a class="services__catalog-link" href="#">Услуги Росреестра</a></li>
+							<li><a class="services__catalog-link" href="#">и другие услуги</a></li>
+						</ul>
+					</div>
+					<div class="accordion">
+						<div data-tabe="tab-1" class="accordion__title">
+							<div class="accordion__container">
+								<img src="images/accardion1.svg" alt="img">
+								<h5>Штрафы ГИБДД</h5>
+								<img class="accordion__sumbol" src="images/accardion-open.svg" alt="open">
+							</div>
+						</div>
+						<div id="tab-1" class="accordion__content">
+							<div class="accordion__content-container">
+								<p>Для поиска укажите номера водительского удостоверения<br> и свидетельство о регистрации ТС или номер штрафа.</p>
+								<p>Если у вас есть на руках постановление о штрафе, вы можете указать реквезиты самостоятельно.</p>
+								<p><span>Платить вовремя — дешевле!</span><br>В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете. </p>
+						</div>
+					</div>
+					</div>
+					<div class="accordion">
+						<div data-tabe="tab-2" class="accordion__title">
+							<div class="accordion__container">
+								<img src="images/accardion2.svg" alt="img">
+								<h5>Судебные задолженности</h5>
+								<img class="accordion__sumbol" src="images/accardion-open.svg" alt="open">
+							</div>
+						</div>
+						<div id="tab-2" class="accordion__content">
+							<div class="accordion__content-container">
+								<p>Для поиска укажите номера водительского удостоверения<br> и свидетельство о регистрации ТС или номер штрафа.</p>
+								<p>Если у вас на руках есть постановление о штрафе, вы можете указать реквезиты самостоятельно.</p>
+								<p><span>Платить вовремя — дешевле!</span><br>В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете. </p>
+						</div>
+					</div>
+					</div>
+					<div class="accordion">
+						<div data-tabe="tab-3" class="accordion__title">
+							<div class="accordion__container">
+								<img src="images/accardion3.svg" alt="img">
+								<h5>Налоги</h5>
+								<img class="accordion__sumbol" src="images/accardion-open.svg" alt="open">
+							</div>
+						</div>
+						<div id="tab-3" class="accordion__content">
+							<div class="accordion__content-container">
+								<p>Для поиска укажите номера водительского удостоверения<br> и свидетельство о регистрации ТС или номер штрафа.</p>
+								<p>Если у вас на руках есть постановление о штрафе, вы можете указать реквезиты самостоятельно.</p>
+								<p><span>Платить вовремя — дешевле!</span><br>В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете. </p>
+						</div>
+					</div>
+					</div>
+					<div class="accordion">
+						<div data-tabe="tab-4" class="accordion__title">
+							<div class="accordion__container">
+								<img src="images/accardion4.svg" alt="img">
+								<h5>Услуги Росреестра</h5>
+								<img class="accordion__sumbol" src="images/accardion-open.svg" alt="open">
+							</div>
+						</div>
+							<div id="tab-4" class="accordion__content">
+								<div class="accordion__content-container">
+									<p>Для поиска укажите номера водительского удостоверения<br> и свидетельство о регистрации ТС или номер штрафа.</p>
+									<p>Если у вас на руках есть постановление о штрафе, вы можете указать реквезиты самостоятельно.</p>
+									<p><span>Платить вовремя — дешевле!</span><br>В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете. </p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="information">
+							<div class="information__item">
+								<div class="information__content">
+									<div class="container">
+										<ul class="information__link">
+												<li class="information__text">
+													<h3>Штрафы ГИБДД</h3>
+													<p>Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</p>
+													<p> Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
+													<h4>ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ! </h4>
+													<p>В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+												</li>
+												<li class="information__img wow ">
+													<img src="images/information1.png" alt="img">
+												</li>
+											</ul>
+									</div>
+								</div>
+									<div class="information__content">
+										<div class="container">
+											<ul class="information__link">
+													<li class="information__text">
+														<h3>Судебные задолженности</h3>
+														<p>Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.</p>
+														<p>Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</p>
+														<h4>УДОБНО!</h4>
+														<p>Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
+													</li>
+													<li class="information__img">
+														<img src="images/information2.png" alt="img">
+													</li>
+												</ul>
+										</div>
+								</div>
+								<div class="information__content">
+									<div class="container">
+										<ul class="information__link">
+												<li class="information__text">
+													<h3>Налоги</h3>
+													<p>Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</p>
+													<p></p>
+													<h4>ВАЖНО!</h4>
+													<p>Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
+												</li>
+												<li class="information__img">
+													<img src="images/information3.png" alt="img">
+												</li>
+											</ul>
+									</div>
+							</div>
+							<div class="information__content">
+								<div class="container">
+									<ul class="information__link">
+											<li class="information__text">
+												<h3>Услуги Росреестра</h3>
+												<p>В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</p>
+												<p> Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</p>
+												<h4>НЕТ КОДА?</h4>
+												<p>Если у вас ещё нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг Росреестра.</p>
+											</li>
+											<li class="information__img">
+												<img src="images/information4.png" alt="img">
+											</li>
+										</ul>
+								</div>
+						</div>
+							</div>
+				</section>
+				<section class="partner">
+					<div class="container">
+						<div class="partner__title">
+							<h2>С нами работают</h2>
+						</div>
+						<div class="partner__content">
+							<div class="partner__content-img">
+								<img src="images/partner1.svg" alt="img">
+								<p>Партнёр 1</p>
+							</div>
+							<div class="partner__content-img">
+								<img src="images/partner2.svg" alt="img">
+								<p>Компания-партнер с длинным названием</p>
+							</div>
+							<div class="partner__content-img">
+								<img src="images/partner3.svg" alt="img">
+								<p>Партнёр 3</p>
+							</div>
+							<div class="partner__content-img">
+								<img src="images/partner4.svg" alt="img">
+								<p>Название партнёра 4</p>
+							</div>
+							<div class="partner__content-img">
+								<img src="images/partner5.svg" alt="img">
+								<p>Компания-партнёра 5</p>
+							</div>
+							<div class="partner__content-img">
+								<img src="images/partner6.svg" alt="img">
+								<p>Партнер 6 с длинным названием</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+ <footer class="footer">
+				<div class="container-fluid">
+					<div class="footer__item">
+						<div class="footer__company">
+							<p>© 2012 – 2020</p>
+							<p>ООО «Название компании»</p>
+						</div>
+						<div class="footer__img">
+							<img src="images/footer-logo.png" alt="img">
+						</div>
+					</div>
+				</div>
+			</footer>
+
+  </div>
+  <script src="js/main.min.js"></script> 
+ </body>
+</html>
