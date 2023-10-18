@@ -13,9 +13,34 @@
   <link rel="stylesheet" href="css/style.min.css">
  </head>
  
- <body>
+ <body id="body">
   <div class="wrapper">
+		<div id="popup" class="popup">
+			<div class="popup__container">
+				<div class="popup__item">
+					<div class="popup__title">
+						<h3>Введите логин и пароль<br>для входа в Личный кабинет</h3>
+					</div>
+					<form class="popup__form">
+						<input type="text" placeholder="Логин">
+						<input type="password" placeholder="Пароль">
+						<input type="submit" value="Войти">
+					</form>
+					<div class="popup__remind">
+						<a href="#">Напомнить пароль</a>
+					</div>
+					<div class="popup__registr">
+						<a href="#">Регистрация</a>
+					</div>
+					<div class="popup__close">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
  <header class="header">
+
 				<div class="container-fluid">
 					<div class="header__item">
 						<button id="burger-button" class="header__burger">
@@ -65,32 +90,9 @@
 			</header>
 
  <main class="main">
-				<section id="popup" class="popup">
-					<div class="popup__container">
-						<div class="popup__item">
-							<div class="popup__title">
-								<h3>Введите логин и пароль<br>для входа в Личный кабинет</h3>
-							</div>
-							<form class="popup__form">
-								<input type="text" placeholder="Логин">
-								<input type="password" placeholder="Пароль">
-								<input type="submit" value="Войти">
-							</form>
-							<div class="popup__remind">
-								<a href="#">Напомнить пароль</a>
-							</div>
-							<div class="popup__registr">
-								<a href="#">Регистрация</a>
-							</div>
-							<div class="popup__close">
-								<span></span>
-								<span></span>
-							</div>
-						</div>
-					</div>
-				</section>
 				<section class="burger-menu">
 					<div class="container-fluid burger-menu__popup ">
+						
 						<div id="burger" class="burger-menu__container">
 							<div class="burger-menu__inner">
 								<div class="burger-menu__cabinet">
@@ -143,7 +145,7 @@
 						</ul>
 					</div>
 					<div class="accordion">
-						<div data-tabe="tab-1" class="accordion__title">
+						<div data-tab="tab-1" class="accordion__title">
 							<div class="accordion__container">
 								<img src="images/accardion1.svg" alt="img">
 								<h5>Штрафы ГИБДД</h5>
@@ -159,7 +161,7 @@
 					</div>
 					</div>
 					<div class="accordion">
-						<div data-tabe="tab-2" class="accordion__title">
+						<div data-tab="tab-2" class="accordion__title">
 							<div class="accordion__container">
 								<img src="images/accardion2.svg" alt="img">
 								<h5>Судебные задолженности</h5>
@@ -175,7 +177,7 @@
 					</div>
 					</div>
 					<div class="accordion">
-						<div data-tabe="tab-3" class="accordion__title">
+						<div data-tab="tab-3" class="accordion__title">
 							<div class="accordion__container">
 								<img src="images/accardion3.svg" alt="img">
 								<h5>Налоги</h5>
@@ -191,7 +193,7 @@
 					</div>
 					</div>
 					<div class="accordion">
-						<div data-tabe="tab-4" class="accordion__title">
+						<div data-tab="tab-4" class="accordion__title">
 							<div class="accordion__container">
 								<img src="images/accardion4.svg" alt="img">
 								<h5>Услуги Росреестра</h5>

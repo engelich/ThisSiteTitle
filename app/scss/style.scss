@@ -30,6 +30,7 @@ background-color: white;
 		justify-content: space-between;
 		transition: all 0.2s ease-in-out;
 		z-index: 2;
+		padding: 0;
 		
 		cursor: pointer;
 		& span{
@@ -45,13 +46,13 @@ background-color: white;
 	}
 	&__burger_active{
 		& span:first-child{
-			transform: translateY(10px) rotate(-45deg);
+			transform: translateY(11px) rotate(-45deg);
 		}
 		& span:nth-child(2){
 			opacity: 0;
 		}
 		& span:last-child{
-			transform: translateY(-10px) rotate(45deg);
+			transform: translateY(-11px) rotate(45deg);
 		}
 	}
 	&__help img{
@@ -122,6 +123,10 @@ background-color: white;
 
 	}
 }
+&__body_active{
+	height: 100%;
+	overflow-y: hidden;
+}
 }
 
 .popup{
@@ -130,13 +135,14 @@ background-color: white;
 	width: 100%;
 	height: 100%;
 	background: #000000CC;
-	z-index: 4;
+	z-index: 6;
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.2s ease-in-out;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 		&_active{
 			opacity: 1;
 			visibility: visible;
@@ -148,6 +154,7 @@ background-color: white;
 			background-color: white;
 			height: 470px;
 			position: relative;
+			overflow-y: auto;
 		}
 		&__item{
 			max-width: 320px;
@@ -211,11 +218,15 @@ background-color: white;
 			color: #569DDC;
 			border-bottom: 1px #569DDC dotted;
 		}
-		&__registr a{
-			color: #004685;
-			border-bottom: 1px #004685 dotted;
-			transition: all 0.2s ease-in-out;
+		&__registr {
+			padding-bottom: 20px;
+			& a{
+				color: #004685;
+				border-bottom: 1px #004685 dotted;
+				transition: all 0.2s ease-in-out;
+			}
 		}
+	
 		&__registr:hover a{
 			color: #569DDC;
 			border-bottom: 1px #569DDC dotted;
@@ -278,6 +289,7 @@ background-color: white;
 		box-shadow: 0px 3px 12px #00000029;
 		position: absolute;
 		display: flex;
+		overflow-x: hidden;
 		z-index: 3;
 		transition: all 0.5s cubic-bezier(1.000, -0.220, 0.015, 1.290);
 	
@@ -477,6 +489,7 @@ background-color: white;
 		& h4{
 			font-weight: 700;
 			margin-top: 35px;
+			color: #D30531;
 
 		}
 	}
@@ -532,7 +545,11 @@ background-color: white;
 	}
 
 }
-
+.ddd{
+	width: 300px;
+	height: 300px;
+	overflow: auto;
+}
 @media(max-width:800px){
 	.container{
 		padding: 0 20px !important;
@@ -560,10 +577,10 @@ background-color: white;
 	}
 	&__burger_active{
 		& span:first-child{
-			transform: translateY(6px) rotate(-45deg);
+			transform: translateY(7px) rotate(-45deg);
 		}
 		& span:last-child{
-			transform: translateY(-6px) rotate(45deg);
+			transform: translateY(-7px) rotate(45deg);
 		}
 	}
 	}
@@ -661,6 +678,21 @@ background-color: white;
 				border-bottom: 1px dotted #00468575;
 			}
 		}
+		
+		&__title.active &__sumbol{
+				transform: rotate(180deg);
+		}
+		&__title.active img{
+			opacity: 0.7;
+		}
+		&__title.active h5{
+			color: #569DDC;
+		}
+		
+		&__sumbol{
+			transition: all 0.2s ease-in-out;
+		}
+		
 		&__container{
 			display: flex;
 			align-items: center;
@@ -673,16 +705,17 @@ background-color: white;
 			max-height: 0;
 			overflow: hidden;
 			transition: all 0.2s ease-in-out ;
+		
 		}
-		&__content_active{
+		&__content.active{
 			visibility: visible;
-			max-height: 100%;
-			
+			box-sizing: inherit;
 			opacity: 1;
 			transition: all 0.2s ease-in-out ;
 		}
 		&__content-container{
-			padding: 0 20px;
+			padding: 0px 20px;
+
 		}
 		
 		&__content p{
@@ -701,9 +734,7 @@ background-color: white;
 			font-weight: 700;
 			text-transform: uppercase;
 		}
-		&__sumbol{
-			transition: all 0.2s ease-in-out;
-		}
+	
 	}
 	.information{
 		display: none;
